@@ -2,7 +2,7 @@ const tiles = document.querySelectorAll(".tile");
 const PLAYER_X = "X";
 const PLAYER_O = "O";
 let turn = PLAYER_X;
-var Userscore = 0, Computerscore = 0;
+
 const boardState = Array(tiles.length);
 boardState.fill(null);
 
@@ -95,15 +95,10 @@ function gameOverScreen(winnerText) {
   if (winnerText != null) {
     text = `Winner is ${winnerText}!`;
   }
-  if("${winnerText}" == "O")
-  {
-    Userscore++;
-  }
   gameOverArea.className = "visible";
   gameOverText.innerText = text;
   gameOverSound.play();
 }
-function
 
 function startNewGame() {
   strike.className = "strike";
